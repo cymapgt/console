@@ -1,0 +1,59 @@
+{
+    "keywords": [
+        "console"
+    ],
+    "autoload" : {        
+        "files" : [
+            "src/config/NamedConstant.php"
+        ],
+        "psr-4" : {
+            "cymapgt\\Exception\\" : "src/Exception",
+            "cymapgt\\core\\utility\\console\\" : "src"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "cymapgt\\core\\utility\\console\\tests\\" : "tests"
+        }
+    },
+    "name" : "cymapgt/console",
+    "type" : "library",
+    "description" : "Facilitate accessing cymapgt service API's via a console interface",
+    "license" : "proprietary",
+    "require" : {
+        "doctrine/orm" : "2.3.*",
+        "hoa/console" : "~2.0",
+        "cymapgt/logger" : "1.*",
+        "cymapgt/db" : "1.*",
+        "cymapgt/usercredential" : "1.4.*",
+        "cymapgt/validator" : "1.*"
+    },
+    "require-dev" : {
+        "phpunit/phpunit" : "4.*"
+    },
+    "support" : {
+        "email" : "cogana@gmail.com",
+        "source" : "https://bitbucket.org/cymapgt/logger/"
+    },
+    "authors" : [{
+        "name" : "Cyril Ogana",
+        "email" : "cogana@gmail.com",
+        "homepage" : "http://www.cymapk.com",
+        "role" : "Maintainer"        
+    }],
+    "homepage" : "https://bitbucket.org/cymapgt/logger/",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://bitbucket.org/cymapgt/logger"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://bitbucket.org/cymapgt/notifier"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://bitbucket.org/cymapgt/validator"
+        }
+    ]
+}
