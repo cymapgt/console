@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2200c46808f3b32115cf29f726942fad",
-    "content-hash": "eb2c24af6f3f8c613f6bcdc582337a0a",
+    "hash": "80d21de80794b8ee3236d6ac5d2d5080",
+    "content-hash": "532973384fe514b212359d3026336758",
     "packages": [
         {
             "name": "cymapgt/db",
@@ -55,21 +55,21 @@
         },
         {
             "name": "cymapgt/logger",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "hg",
                 "url": "https://bitbucket.org/cymapgt/logger",
-                "reference": "615b9ea66b8fc518e7a7079905793bdeee11f836"
+                "reference": "0d425fbf996db1186e2ae21dc031841422246bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/cymapgt/logger/get/615b9ea66b8fc518e7a7079905793bdeee11f836.zip",
-                "reference": "615b9ea66b8fc518e7a7079905793bdeee11f836",
+                "url": "https://bitbucket.org/cymapgt/logger/get/0d425fbf996db1186e2ae21dc031841422246bf4.zip",
+                "reference": "0d425fbf996db1186e2ae21dc031841422246bf4",
                 "shasum": ""
             },
             "require": {
-                "cymapgt/notifier": "1.*",
-                "monolog/monolog": "1.*"
+                "cymapgt/notifier": "^1.0.0",
+                "monolog/monolog": "^1.0.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*"
@@ -109,25 +109,25 @@
                 "email": "cogana@gmail.com",
                 "source": "https://bitbucket.org/cymapgt/notifier/"
             },
-            "time": "2015-06-26 21:06:48"
+            "time": "2015-10-25 15:33:11"
         },
         {
             "name": "cymapgt/notifier",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "hg",
                 "url": "https://bitbucket.org/cymapgt/notifier",
-                "reference": "970d5294b90136e33b2b0df0f84a97c555d01a8c"
+                "reference": "6275e4a3f2b961387df1e650a4817c2fec98d2af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/cymapgt/notifier/get/970d5294b90136e33b2b0df0f84a97c555d01a8c.zip",
-                "reference": "970d5294b90136e33b2b0df0f84a97c555d01a8c",
+                "url": "https://bitbucket.org/cymapgt/notifier/get/6275e4a3f2b961387df1e650a4817c2fec98d2af.zip",
+                "reference": "6275e4a3f2b961387df1e650a4817c2fec98d2af",
                 "shasum": ""
             },
             "require": {
-                "phpmailer/phpmailer": "5.*",
-                "swiftmailer/swiftmailer": "5.*"
+                "phpmailer/phpmailer": "^5.2.0",
+                "swiftmailer/swiftmailer": "^5.2.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*"
@@ -168,7 +168,7 @@
                 "email": "cogana@gmail.com",
                 "source": "https://bitbucket.org/cymapgt/notifier"
             },
-            "time": "2015-06-16 05:58:48"
+            "time": "2015-10-25 15:19:17"
         },
         {
             "name": "cymapgt/phpass",
@@ -274,20 +274,20 @@
         },
         {
             "name": "cymapgt/validator",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "hg",
                 "url": "https://bitbucket.org/cymapgt/validator",
-                "reference": "807586cba976ed98ab4c6971d2e24a4907ecf800"
+                "reference": "2cd73fad9dead5c9a083c697a1f97307b6a996c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/cymapgt/validator/get/807586cba976ed98ab4c6971d2e24a4907ecf800.zip",
-                "reference": "807586cba976ed98ab4c6971d2e24a4907ecf800",
+                "url": "https://bitbucket.org/cymapgt/validator/get/2cd73fad9dead5c9a083c697a1f97307b6a996c1.zip",
+                "reference": "2cd73fad9dead5c9a083c697a1f97307b6a996c1",
                 "shasum": ""
             },
             "require": {
-                "respect/validation": "0.9.*"
+                "respect/validation": "~0.9.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*"
@@ -324,7 +324,7 @@
                 "email": "cogana@gmail.com",
                 "source": "https://bitbucket.org/cymapgt/validator"
             },
-            "time": "2015-10-05 19:56:59"
+            "time": "2015-10-25 22:25:06"
         },
         {
             "name": "doctrine/annotations",
@@ -1156,16 +1156,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.17.1",
+            "version": "1.17.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422"
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/0524c87587ab85bc4c2d6f5b41253ccb930a5422",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
                 "shasum": ""
             },
             "require": {
@@ -1179,10 +1179,11 @@
                 "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
                 "php-console/php-console": "^3.1.3",
                 "phpunit/phpunit": "~4.5",
                 "phpunit/phpunit-mock-objects": "2.3.0",
-                "raven/raven": "~0.11",
+                "raven/raven": "^0.13",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
@@ -1228,7 +1229,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-08-31 09:17:37"
+            "time": "2015-10-14 12:51:02"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -1667,16 +1668,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/eabf68b476ac7d0f73793aada060f1c1a9bf8979",
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979",
                 "shasum": ""
             },
             "require": {
@@ -1725,7 +1726,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-14 06:51:16"
+            "time": "2015-10-06 15:47:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1907,16 +1908,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.10",
+            "version": "4.8.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8"
+                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/463163747474815c5ccd4ae12b5b355ec12158e8",
-                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/625f8c345606ed0f3a141dfb88f4116f0e22978e",
+                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e",
                 "shasum": ""
             },
             "require": {
@@ -1975,7 +1976,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-01 09:14:30"
+            "time": "2015-10-23 06:48:33"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2267,16 +2268,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01"
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/bc37d50fea7d017d3d340f230811c9f1d7280af4",
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4",
                 "shasum": ""
             },
             "require": {
@@ -2314,7 +2315,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2014-10-06 09:23:50"
+            "time": "2015-10-12 03:26:01"
         },
         {
             "name": "sebastian/recursion-context",
