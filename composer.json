@@ -21,12 +21,12 @@
     "description" : "Facilitate accessing cymapgt service API's via a console interface",
     "license" : "proprietary",
     "require" : {
-        "doctrine/orm" : "2.3.*",
+        "doctrine/orm" : "~2.3.0",
         "hoa/console" : "~2.0",
-        "cymapgt/logger" : "1.*",
-        "cymapgt/db" : "1.*",
-        "cymapgt/usercredential" : "1.4.*",
-        "cymapgt/validator" : "1.*"
+        "cymapgt/logger" : "^1.0.0",
+        "cymapgt/db" : "^1.0.0",
+        "cymapgt/usercredential" : "^1.4.3",
+        "cymapgt/validator" : "^1.0.0"
     },
     "require-dev" : {
         "phpunit/phpunit" : "4.*"
