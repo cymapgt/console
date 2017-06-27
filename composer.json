@@ -18,10 +18,10 @@
     },
     "name" : "cymapgt/console",
     "type" : "library",
-    "description" : "Facilitate accessing cymapgt service API's via a console interface",
-    "license" : "proprietary",
+    "description" : "Create a console interface for any PSR-0 or PSR-3 compliant package",
+    "license" : "BSD 3-clause",
     "require" : {
-        "doctrine/orm" : "~2.3.0",
+        "doctrine/orm" : "~2.5.0",
         "hoa/console" : "~2.0",
         "cymapgt/logger" : "^1.0.0",
         "cymapgt/db" : "^1.0.0",
@@ -33,7 +33,7 @@
     },
     "support" : {
         "email" : "cogana@gmail.com",
-        "source" : "https://bitbucket.org/cymapgt/logger/"
+        "source" : "https://github.com/cymapgt/console"
     },
     "authors" : [{
         "name" : "Cyril Ogana",
@@ -41,19 +41,5 @@
         "homepage" : "http://www.cymapk.com",
         "role" : "Maintainer"        
     }],
-    "homepage" : "https://bitbucket.org/cymapgt/logger/",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://bitbucket.org/cymapgt/logger"
-        },
-        {
-            "type": "vcs",
-            "url":  "https://bitbucket.org/cymapgt/notifier"
-        },
-        {
-            "type": "vcs",
-            "url":  "https://bitbucket.org/cymapgt/validator"
-        }
-    ]
+    "homepage" : "https://github.com/cymapgt/console"
 }
