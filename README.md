@@ -116,4 +116,4 @@ PHPUnit Tests are provided with the package
 
 ### License
 
-PROPRIETARY
+BSD 3-clause
