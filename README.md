@@ -1,5 +1,5 @@
 # console
-package for running configuration and processing tasks for cymapgt modules via command line interface
+package for exposing PHP services via a console interface, providing build in authentication if needed
 
 ## Description
 
@@ -104,6 +104,55 @@ serviceName	 - The name of the service as registered in the console, or one of t
 help bootstrap -m=config-all -v=3
 
 help add
+
+3.**REMOVE COMMAND:**
+
+remove serviceName
+
+**COMMANDS AND SWITCHES:**
+
+*COMMANDS*
+
+serviceName	 - The name of the service as registered in the console, or one of the sticky services.
+
+*SWITCHES*
+
+None
+
+**EXAMPLE:**
+
+remove bootstrap
+
+4.**QUIT COMMAND:**
+
+quit
+
+**COMMANDS AND SWITCHES:**
+
+*COMMANDS*
+
+None
+
+*SWITCHES*
+
+None
+
+**EXAMPLE:**
+
+quit
+
+5.**CUSTOM COMMANDS:**
+
+Your PHP services functionality is exposed by implementing the NetConsoleInterface
+
+After this implementation, you need to register your package with NetConsole by using the add command.
+
+Successfully adding the package will expose all of the commands and switches you defined in the
+console configuration. The package can thus be used for managing tasks such as application
+installations within a controlled environment if you are distributing your proprietary logic.
+
+It can also be used to quickly convert PHP services to console applications.
+
 
 ### Testing
 
