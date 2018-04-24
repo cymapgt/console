@@ -19,7 +19,7 @@
     "name" : "cymapgt/console",
     "type" : "library",
     "description" : "Create a console interface for any PSR-0 or PSR-3 compliant package",
-    "license" : "BSD 3-clause",
+    "license" : "BSD-3-Clause",
     "require" : {
         "php" : ">=7.0.0",
         "doctrine/orm" : "~2.5.0",
