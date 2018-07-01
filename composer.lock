@@ -7,6 +7,53 @@
     "content-hash": "90232403f12ba73f521854ef8deb7291",
     "packages": [
         {
+            "name": "cymapgt/asn1",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cymapgt/ASN1.git",
+                "reference": "5ce6832cfbf6ea9583d947b4773dbfbaa8df57c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cymapgt/ASN1/zipball/5ce6832cfbf6ea9583d947b4773dbfbaa8df57c4",
+                "reference": "5ce6832cfbf6ea9583d947b4773dbfbaa8df57c4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FreeDSx\\Asn1\\": "src/FreeDSx/Asn1"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chad Sikorra",
+                    "email": "Chad.Sikorra@gmail.com"
+                }
+            ],
+            "description": "An ASN.1 library for PHP.",
+            "homepage": "https://github.com/FreeDSx/ASN1",
+            "keywords": [
+                "DER",
+                "asn.1",
+                "asn1",
+                "ber",
+                "x.690"
+            ],
+            "time": "2018-06-03T22:58:46+00:00"
+        },
+        {
             "name": "cymapgt/db",
             "version": "2.0.0",
             "source": {
@@ -52,6 +99,61 @@
                 "Doctrine DBAL Wrapper"
             ],
             "time": "2018-04-03T17:08:56+00:00"
+        },
+        {
+            "name": "cymapgt/ldap",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cymapgt/LDAP.git",
+                "reference": "a271c71ccf717e6150172c241845e7ee0b1d747b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cymapgt/LDAP/zipball/a271c71ccf717e6150172c241845e7ee0b1d747b",
+                "reference": "a271c71ccf717e6150172c241845e7ee0b1d747b",
+                "shasum": ""
+            },
+            "require": {
+                "cymapgt/asn1": "^0.2.1",
+                "cymapgt/socket": "^0.2.1",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^4.0",
+                "symfony/console": "^3.2",
+                "symfony/debug": "^3.2",
+                "symfony/event-dispatcher": "^3.2",
+                "symfony/filesystem": "^3.2",
+                "symfony/finder": "^3.2",
+                "symfony/process": "^3.2",
+                "symfony/yaml": "^3.2"
+            },
+            "suggest": {
+                "ext-openssl": "For SSL/TLS support."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FreeDSx\\Ldap\\": "src/FreeDSx/Ldap"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chad Sikorra",
+                    "email": "Chad.Sikorra@gmail.com"
+                }
+            ],
+            "description": "A Pure PHP LDAP library",
+            "homepage": "https://github.com/FreeDSx/LDAP",
+            "keywords": [
+                "ldap"
+            ],
+            "time": "2018-06-05T00:08:06+00:00"
         },
         {
             "name": "cymapgt/logger",
@@ -207,24 +309,83 @@
             "time": "2018-04-24T07:09:14+00:00"
         },
         {
-            "name": "cymapgt/usercredential",
-            "version": "2.0.1",
+            "name": "cymapgt/socket",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cymapgt/UserCredential.git",
-                "reference": "d7e2ad3abfc9eb6cbc374a59958ded079a8c84c4"
+                "url": "https://github.com/cymapgt/Socket.git",
+                "reference": "634bd9d34c52f14b9d8fdb7d50a02f94d7f879d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cymapgt/UserCredential/zipball/d7e2ad3abfc9eb6cbc374a59958ded079a8c84c4",
-                "reference": "d7e2ad3abfc9eb6cbc374a59958ded079a8c84c4",
+                "url": "https://api.github.com/repos/cymapgt/Socket/zipball/634bd9d34c52f14b9d8fdb7d50a02f94d7f879d4",
+                "reference": "634bd9d34c52f14b9d8fdb7d50a02f94d7f879d4",
                 "shasum": ""
             },
             "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "cymapgt/asn1": "^0.2.1",
+                "phpspec/phpspec": "^4.0",
+                "symfony/console": "^3.2",
+                "symfony/debug": "^3.2",
+                "symfony/event-dispatcher": "^3.2",
+                "symfony/filesystem": "^3.2",
+                "symfony/finder": "^3.2",
+                "symfony/process": "^3.2",
+                "symfony/yaml": "^3.2"
+            },
+            "suggest": {
+                "ext-openssl": "For SSL/TLS support.",
+                "freedsx/asn1": "For ASN.1 based message queues."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FreeDSx\\Socket\\": "src/FreeDSx/Socket"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chad Sikorra",
+                    "email": "Chad.Sikorra@gmail.com"
+                }
+            ],
+            "description": "A simple socket library for FreeDSx",
+            "homepage": "https://github.com/FreeDSx/Socket",
+            "keywords": [
+                "Socket",
+                "tcp",
+                "udp"
+            ],
+            "time": "2018-06-04T01:16:33+00:00"
+        },
+        {
+            "name": "cymapgt/usercredential",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cymapgt/UserCredential.git",
+                "reference": "78232b035e76f63313489745ee524f811a35adc5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cymapgt/UserCredential/zipball/78232b035e76f63313489745ee524f811a35adc5",
+                "reference": "78232b035e76f63313489745ee524f811a35adc5",
+                "shasum": ""
+            },
+            "require": {
+                "cymapgt/ldap": "^0.5.0",
                 "cymapgt/phpass": "^6.0.0",
                 "php": ">=7.0.0"
             },
             "require-dev": {
+                "geerlingguy/ping": "*",
                 "phpunit/phpunit": "6.*"
             },
             "type": "library",
@@ -255,7 +416,7 @@
             "keywords": [
                 "user authentication"
             ],
-            "time": "2018-04-24T08:47:52+00:00"
+            "time": "2018-06-28T10:45:37+00:00"
         },
         {
             "name": "cymapgt/validator",
@@ -1703,16 +1864,16 @@
         },
         {
             "name": "respect/validation",
-            "version": "1.1.15",
+            "version": "1.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Respect/Validation.git",
-                "reference": "ee9e69776a8e875ac1b5b00d8cf2d2c801c42181"
+                "reference": "54d17abcee9c6e734691754c77641a5f51ecc608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Respect/Validation/zipball/ee9e69776a8e875ac1b5b00d8cf2d2c801c42181",
-                "reference": "ee9e69776a8e875ac1b5b00d8cf2d2c801c42181",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/54d17abcee9c6e734691754c77641a5f51ecc608",
+                "reference": "54d17abcee9c6e734691754c77641a5f51ecc608",
                 "shasum": ""
             },
             "require": {
@@ -1730,7 +1891,7 @@
                 "egulias/email-validator": "Strict (RFC compliant) email validation",
                 "ext-bcmath": "Arbitrary Precision Mathematics",
                 "ext-mbstring": "Multibyte String Functions",
-                "fabpot/php-cs-fixer": "Fix PSR2 and other coding style issues",
+                "friendsofphp/php-cs-fixer": "Fix PSR2 and other coding style issues",
                 "symfony/validator": "Use Symfony validator through Respect\\Validation",
                 "zendframework/zend-validator": "Use Zend Framework validator through Respect\\Validation"
             },
@@ -1762,7 +1923,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-01-02T21:47:22+00:00"
+            "time": "2018-06-23T19:15:38+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1821,16 +1982,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.8",
+            "version": "v3.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf"
+                "reference": "1b97071a26d028c9bd4588264e101e14f6e7cd00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
-                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
+                "url": "https://api.github.com/repos/symfony/console/zipball/1b97071a26d028c9bd4588264e101e14f6e7cd00",
+                "reference": "1b97071a26d028c9bd4588264e101e14f6e7cd00",
                 "shasum": ""
             },
             "require": {
@@ -1851,7 +2012,7 @@
                 "symfony/process": "~3.3|~4.0"
             },
             "suggest": {
-                "psr/log": "For using the console logger",
+                "psr/log-implementation": "For using the console logger",
                 "symfony/event-dispatcher": "",
                 "symfony/lock": "",
                 "symfony/process": ""
@@ -1886,20 +2047,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-05-23T05:02:55+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.8",
+            "version": "v3.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7"
+                "reference": "47e6788c5b151cf0cfdf3329116bf33800632d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
-                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/47e6788c5b151cf0cfdf3329116bf33800632d75",
+                "reference": "47e6788c5b151cf0cfdf3329116bf33800632d75",
                 "shasum": ""
             },
             "require": {
@@ -1942,20 +2103,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-06-25T11:10:40+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3296adf6a6454a050679cde90f95350ad604b171",
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171",
                 "shasum": ""
             },
             "require": {
@@ -1967,7 +2128,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -2001,7 +2162,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         }
     ],
     "packages-dev": [
@@ -2702,16 +2863,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "5.0.6",
+            "version": "5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "33fd41a76e746b8fa96d00b49a23dadfa8334cdf"
+                "reference": "3eaf040f20154d27d6da59ca2c6e28ac8fd56dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/33fd41a76e746b8fa96d00b49a23dadfa8334cdf",
-                "reference": "33fd41a76e746b8fa96d00b49a23dadfa8334cdf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3eaf040f20154d27d6da59ca2c6e28ac8fd56dce",
+                "reference": "3eaf040f20154d27d6da59ca2c6e28ac8fd56dce",
                 "shasum": ""
             },
             "require": {
@@ -2757,7 +2918,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2018-01-06T05:45:45+00:00"
+            "time": "2018-05-29T13:50:43+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

@@ -102,7 +102,7 @@ function loginpassprompt($line) {
         ConsoleCredentials::$isLoggedIn = true;
         Cursor::colorize('bold');
         echo "Welcome to the CymapGT NetConsole.\n\n";
-        echo "Copyright (c) 2017, CYMAP Business Solutions, Gomersol Technologies.\n\n";
+        echo "Copyright (c) 2018, CYMAP Business Solutions, Gomersol Technologies.\n\n";
         echo "Input a registered api name to access CGT package console functionality.\n";
         echo "Use the 'add' command to enroll a new package namespace to the console environment\n";
         echo "Use 'replace' command to update an existing packages details\n";

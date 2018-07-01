@@ -2,7 +2,7 @@
 namespace cymapgt\core\utility\console;
 
 use cymapgt\Exception\NetConsoleException;
-use Hoa\Console\Readline\Readline;
+use Hoa\Console\Readline\Readlhine;
 use cymapgt\core\utility\console\config\ConsoleConfig;
 use cymapgt\core\utility\console\helper\ConsoleRegister;
 use cymapgt\core\utility\validator\TypeValidator;
@@ -421,10 +421,12 @@ class ConsoleManager implements abstractclass\NetConsoleInterface
             $listOfFunctions[($serviceName)]['args'][($functionArgName)]['docs'] = $listFunctionDocumentation;         
         }
         
-        $listFunctionCommands = $listFunctionDocumentationArr[($serviceName)]['commands'];
-        $listOfFunctions[($serviceName)]['commands'] = $listFunctionCommands;
-        $listFunctionFlags = $listFunctionDocumentationArr[($serviceName)]['flags'];
-        $listOfFunctions[($serviceName)]['flags'] = $listFunctionFlags;   
+        if (isset($listFunctionDocumentationArr) && is_array($listFunctionDocumentationArr)) {
+            $listFunctionCommands = $listFunctionDocumentationArr[($serviceName)]['commands'];
+            $listOfFunctions[($serviceName)]['commands'] = $listFunctionCommands;
+            $listFunctionFlags = $listFunctionDocumentationArr[($serviceName)]['flags'];
+            $listOfFunctions[($serviceName)]['flags'] = $listFunctionFlags;               
+        }
             
         return $listOfFunctions;
     }
@@ -472,7 +474,56 @@ class ConsoleManager implements abstractclass\NetConsoleInterface
                         )
                     )
                 )
-            )            
+            ),
+            'remove' => array (
+                'method' => 'remove',
+                'args' => array (
+                    'serviceName' => array (
+                        'type' => 'varNotNull',
+                        'params' => array (
+                        )
+                    )
+                )
+            ),
+            'replace' => array (
+                'method' => 'add',
+                'args' => array (
+                    'serviceName' => array (
+                        'type' => 'varNotNull',
+                        'params' => array (
+                        )
+                    ),
+                    'serviceNamespace' => array (
+                        'type' => 'varNotNull',
+                        'params' => array (
+                        )
+                    )
+                )
+            ),
+            'route' => array (
+                'method' => 'add',
+                'args' => array (
+                    'serviceName' => array (
+                        'type' => 'varNotNull',
+                        'params' => array (
+                        )
+                    ),
+                    'serviceCommands' => array (
+                        'type' => 'varNotNull',
+                        'params' => array (
+                        )
+                    ),
+                    'commandFlags' => array (
+                        'type' => 'varNotNull',
+                        'params' => array (
+                        )
+                    )                    
+                )
+            ),
+            'quit' => array (
+                'method' => 'quit',
+                'args' => array(),
+            )
         );
     }
 
@@ -502,7 +553,7 @@ class ConsoleManager implements abstractclass\NetConsoleInterface
                     'serviceName' => array (
                         1 => "The name of the service as registered in the console, or one of the sticky services.",
                         2 => "Sticky services are those included in default functionality of the console application.",
-                        3 => "The list of sticky services for Console are add, remove, replace, quit and route"
+                        3 => "The list of sticky services for Console are add, remove, replace, help, quit and route"
                     ),
                     'helpVerbosity' => array (
                         1 => 'The verbosity level of the help documentation',
@@ -535,7 +586,71 @@ class ConsoleManager implements abstractclass\NetConsoleInterface
                         3 => 'A fully qualified serviceNamespace name must begin with the root PHP namespace to ensure that there are no relative namespace resolutions being made'
                     )
                 )
-            )            
+            ),
+            'remove' => array (
+                'commands' => array (
+                    'serviceName'
+                ),
+                'flags' => array (
+                ),
+                'docs' => array (
+                    'serviceName' => array (
+                        1 => "The name of an already registered service as registered in the console. You cannot remove sticky services (add, remove, replace, route, help)",
+                        2 => "This service must have been registered prior to running this command, else an error is output.",
+                        3 => "When you remove a service, the service name is not indexed and can be re-used with the same namespace or a new namespace in future."
+                    )
+                )
+            ),
+            'replace' => array (
+                'commands' => array (
+                    'serviceName',
+                    'serviceNamespace'
+                ),
+                'flags' => array (
+                ),
+                'docs' => array (
+                    'serviceName' => array (
+                        1 => "The name of the current registered service. You cannot replace sticky services (add, remove, replace, route, help).",
+                        2 => "Sticky services are those included in default functionality of the console application.",
+                        3 => "When you replace a service, the service name remains indexed but loads the functionality of the new Namespace specified."
+                    ),
+                    'serviceNamespace' => array (
+                        1 => 'The fully qualified namespace for the service being loaded to replace an existing namespace under the same serviceName',
+                        2 => 'Services being registered to the API must implement as a contract the NetConsoleInterface. Console Manager will verify this',
+                        3 => 'A fully qualified serviceNamespace name must begin with the root PHP namespace to ensure that there are no relative namespace resolutions being made'
+                    )
+                ),
+            ),
+            'route' => array (
+                'commands' => array (
+                    'serviceName',
+                    'serviceCommands',
+                    'commandFlags'
+                ),
+                'flags' => array (
+                ),
+                'docs' => array (
+                    'serviceName' => array (
+                        1 => "The name of the a service registered in the console, this doesn't include sticky services.",
+                        2 => "The route command is not available for use on the console front end; it is used to handle calls all user defined services, hence in essense is a Router in applicaiton sense.",
+                        3 => "All services other than the reserved services (add, remove, replace, help, quit) use the route command under the hood. Route command, much like a web framework router, receives calls to services as well as parameters through service commands and flags, and routes them to the services controller which returns a result."
+                    ),
+                    'serviceCommands' => array (
+                        1 => 'Service commands to enable the router compile build a call to the called service. Check the services documentation for list of service commands.',
+                    ),
+                    'commandFlags' => array (
+                        1 => 'Command flags to enable the router compile build a call to the called service. Check the services documentation for list of command flags.',
+                    )                 
+                )                
+            ),
+            'quit' => array (
+                'commands' => array (
+                ),
+                'flags' => array (
+                ),
+                'docs' => array (
+                )
+            )
         );
     }
     
