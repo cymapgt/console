@@ -24,7 +24,7 @@
         "php" : ">=7.0.0",
         "doctrine/orm" : "~2.5.0",
         "hoa/console" : "~3.0",
-        "cymapgt/logger" : "^2.0.0",
+        "cymapgt/logger" : "~1.0.0",
         "cymapgt/db" : "^2.0.0",
         "cymapgt/usercredential" : "^2.0.0",
         "cymapgt/validator" : "^2.0.0"
