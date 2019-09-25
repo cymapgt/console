@@ -21,16 +21,16 @@
     "description" : "Create a console interface for any PSR-0 or PSR-3 compliant package",
     "license" : "BSD-3-Clause",
     "require" : {
-        "php" : ">=7.0.0",
+        "php" : ">=7.2.0",
         "doctrine/orm" : "~2.6.0",
         "hoa/console" : "~3.0",
-        "cymapgt/logger" : "^2.0.1",
-        "cymapgt/db" : "^2.0.0",
-        "cymapgt/usercredential" : "^2.0.0",
-        "cymapgt/validator" : "^2.0.0"
+        "cymapgt/logger" : "^3.0.0",
+        "cymapgt/db" : "^3.0.0",
+        "cymapgt/usercredential" : "^3.0.0",
+        "cymapgt/validator" : "^3.0.0"
     },
     "require-dev" : {
-        "phpunit/phpunit" : "6.*"
+        "phpunit/phpunit" : "8.*"
     },
     "support" : {
         "email" : "cogana@gmail.com",
